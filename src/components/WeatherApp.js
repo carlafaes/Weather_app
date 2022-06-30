@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import WeatherForm from "./WeatherForm";
 
 
@@ -6,11 +6,19 @@ export default function WeatherApp() {
 
     const [weather,setWeather] = useState(null);
 
-    function handleChangeCity(city){
-        setWeather(null);
-        loadInfo(city);
-    }
+    useEffect(() => {
+      loadInfo();
+    },[])
+    
+    useEffect(()=>{
+      document.title = `Ẁeather | ${weather?.location.name ?? ""}`; // cambia el nombre del documento al de la ciudad que se esta buscando
+    },[weather])
 
+    function handleChangeCity(city){
+      setWeather(null);
+      loadInfo(city);
+    }
+    
     async function loadInfo(city='london'){
       try{
         const request= await fetch(
