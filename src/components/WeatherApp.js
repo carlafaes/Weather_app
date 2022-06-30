@@ -14,9 +14,11 @@ export default function WeatherApp() {
     async function loadInfo(city='london'){
       try{
         const request= await fetch(
-          `${process.env.REACT_APP_API_URL}&key=${process.env.REACT_APP_API_KEY}&q=${city}`);
-          const json= request.json();
+          `${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_API_KEY}&q=${city}`
+          );
+          const json= await request.json();
           console.log(json);
+          setWeather(json);
       }
       catch(err){
         console.log(err);
@@ -25,7 +27,7 @@ export default function WeatherApp() {
   return (
     <div className="weather-app">
       <WeatherForm onChangeCity={handleChangeCity}/>
-    <div>info</div>
+    <div>{weather?.current.temp_c}</div>
     </div>
   );
 }

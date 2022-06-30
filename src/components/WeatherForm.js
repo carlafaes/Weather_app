@@ -13,13 +13,12 @@ export default function WeatherForm({onChangeCity}){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(city);
         onChangeCity(city);
     }
     return(
         <>
-        <form>
-            <input type="text" value={city} onChange={handleChange}/>
+        <form onSubmit={handleSubmit}>
+            <input type="text"  onChange={handleChange}/>
         </form>
         </>
     )
