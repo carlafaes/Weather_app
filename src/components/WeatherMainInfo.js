@@ -14,7 +14,10 @@ export default function WeatherMainInfo({weather}){
             <div>
                 <div>{weather?.current.condition.text}</div>
                 <div>{weather?.current.temp_c}º</div>
+                <div>Sensacion Térmica:{weather?.current.feelslike_c}º</div>
+                <div>Humedad:{weather?.current.humidity}%</div>
             </div>
+
         </div>
         {weather?.location.lat && weather?.location.lon ?
         <iframe 
@@ -30,16 +33,7 @@ export default function WeatherMainInfo({weather}){
         <div>Buscando coordenadas</div>
         }
 
-        {/* <iframe 
-        title="map"
-        className="iframe" 
-        src={`https://maps.google.com/?ll=${weather?.location.lon},${weather?.location.lat}&z=20&t=m&output=embed`} 
-        height="600" 
-        width="600"
-        frameBorder="0" 
-        style={{border:0}} 
-        allowFullScreen></iframe>
-         */}
+       
          </>
     )
 }
