@@ -6,7 +6,7 @@ export default function WeatherForHours({weather}) {
 return(
         <div>
             <h2>Pronostico por horas</h2>
-            <Table responsive="sm" striped bordered hover variant="dark">
+            <Table responsive striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>Horas</th>
