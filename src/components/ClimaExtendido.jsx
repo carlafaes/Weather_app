@@ -1,5 +1,5 @@
 
-export default function Clima_extendido(){
+export default function ClimaExtendido(){
 
     return(
         <div>

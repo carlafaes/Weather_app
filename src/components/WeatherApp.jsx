@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import WeatherForm from "./WeatherForm";
 import WeatherMainInfo from "./WeatherMainInfo";
-import Clima_extendido from "./Clima_extendido";
+import ClimaExtendido from "./ClimaExtendido";
 
 export default function WeatherApp() {
 
@@ -37,7 +37,7 @@ export default function WeatherApp() {
     <div className="weather-app">
       <WeatherForm onChangeCity={handleChangeCity}/>
       <WeatherMainInfo weather={weather} />
-      <Clima_extendido weather={weather} />
+      <ClimaExtendido weather={weather} />
     </div>
   );
 }
