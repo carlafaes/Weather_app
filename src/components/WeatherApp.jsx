@@ -6,6 +6,7 @@ import ClimaExtendido from "./ClimaExtendido";
 export default function WeatherApp() {
 
     const [weather,setWeather] = useState(null);
+    const [city,setCity] = useState('london');
 
     useEffect(() => {
       loadInfo();
@@ -23,7 +24,7 @@ export default function WeatherApp() {
     async function loadInfo(city='london'){
       try{
         const request= await fetch(
-          `${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_API_KEY}&q=${city}`
+          `${process.env.REACT_APP_FORECAST}&key=${process.env.REACT_APP_API_KEY}&q=${city}&days=9&aqi=no&alerts=yes&lang=es`
           );
           const json= await request.json();
           console.log(json);

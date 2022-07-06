@@ -3,7 +3,7 @@ export default function WeatherMainInfo({weather}){
 
     return(
         <>
-        <div>{weather?.location.name}</div>
+        <div>{weather?.location.name},{weather?.location.region}</div>
         <div>{weather?.location.country}</div>
         <div>
             <div>
