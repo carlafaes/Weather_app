@@ -11,6 +11,9 @@ return(
                     <tr>
                         <th>Horas</th>
                         <th>Temperatura</th>
+                        <th></th>
+                        <th>Viento</th>
+                        <th>Humedad</th>
                     </tr>
                 </thead>
             {weather ? weather.forecast.forecastday.map(function(hours,index){
@@ -18,18 +21,19 @@ return(
                     <>
                         {hours.hour.map(function(hour,index){
                             return(
-                                <tbody>
+                                <tbody key={index}>
                                 <tr>
-                                    <td>{index +1}</td>
-                                    <td>{hour.feelslike_c}</td>
+                                    <td>{(hour.time).slice(10)}</td>
+                                    <td>{hour.feelslike_c}º</td>
                             
                                     <td>
                                         {hour.condition.text}
                                         <img src={`http:${hour.condition.icon}`} alt={hour.condition.text}/>
                                     </td>
                                     
+                                    <td>{hour.wind_kph}km/h</td>
 
-                                    
+                                    <td>{hour.humidity}%</td>
                                 </tr>
                                 </tbody>
                             )
@@ -37,7 +41,7 @@ return(
                     </>
                 )})
             :
-            <div>Buscando pronostico</div>}
+            <tfoot>Buscando pronostico</tfoot>}
             </Table>
         </div>
     )
