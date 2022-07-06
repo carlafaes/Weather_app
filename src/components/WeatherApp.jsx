@@ -6,7 +6,6 @@ import ClimaExtendido from "./ClimaExtendido";
 export default function WeatherApp() {
 
     const [weather,setWeather] = useState(null);
-    const [city,setCity] = useState('london');
 
     useEffect(() => {
       loadInfo();

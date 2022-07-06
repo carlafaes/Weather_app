@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BsArrowDownSquareFill, BsArrowUpSquareFill} from 'react-icons/bs';
 
 export default function ClimaExtendido({weather}){
