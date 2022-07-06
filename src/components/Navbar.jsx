@@ -5,7 +5,7 @@ export default function Navbar(){
         <>
          <Nav fill variant="tabs" defaultActiveKey="/home">
         <Nav.Item>
-            <Nav.Link href="/xhours">Por Horas</Nav.Link>
+            <Nav.Link href="/">Por Horas</Nav.Link>
         </Nav.Item>
         <Nav.Item>
             <Nav.Link eventKey="link-1">Loooonger NavLink</Nav.Link>

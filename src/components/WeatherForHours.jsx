@@ -40,9 +40,12 @@ return(
                         })}
                     </>
                 )})
-            :
-            <tfoot>Buscando pronostico</tfoot>}
-            </Table>
+                :
+                <tfoot>
+                    <tr>Buscando pronostico</tr>
+                </tfoot>
+                }
+                </Table>
         </div>
     )
 }
