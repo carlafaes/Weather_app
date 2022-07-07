@@ -14,6 +14,7 @@ import WeatherForHours from "./WeatherForHours";
 import InfoSun from "./InfoSun";
 import Alerts from "./Alerts";
 import Footer from "./Footer";
+import Spinner from "./Spinner";
 
 export default function WeatherApp() {
 
@@ -47,6 +48,7 @@ export default function WeatherApp() {
     }
   return (
     <div className={style.weather}>
+      {weather ? 
       <center>
       <WeatherForm onChangeCity={handleChangeCity}/>
       <WeatherMainInfo weather={weather} />
@@ -81,6 +83,12 @@ export default function WeatherApp() {
         </Accordion.Item>
       </Accordion>
       </center>
+      :
+      <div>
+        <br/>
+        <Spinner />
+      </div>
+        }
       <br/>
       <Footer />
     </div>
