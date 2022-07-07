@@ -8,6 +8,7 @@ import WeatherMainInfo from "./WeatherMainInfo";
 import ClimaExtendido from "./ClimaExtendido";
 import WeatherForHours from "./WeatherForHours";
 import InfoSun from "./InfoSun";
+import Alerts from "./Alerts";
 
 export default function WeatherApp() {
 
@@ -60,6 +61,13 @@ export default function WeatherApp() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="3">
+          <Accordion.Header>Alertas Metereológicas</Accordion.Header>
+          <Accordion.Body>
+            <Alerts weather={weather} />
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey="4">
           <Accordion.Header>Informacion Astronomica Extendida</Accordion.Header>
           <Accordion.Body>
             <InfoAstronomic weather={weather} />
