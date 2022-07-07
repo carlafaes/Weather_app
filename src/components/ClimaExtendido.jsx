@@ -11,6 +11,7 @@ export default function ClimaExtendido({weather}){
             weather.forecast.forecastday.map((day,index)=>(
                 <div key={index}>
                     <div>
+                        <h3>{day.date}</h3>
                         <p><BsArrowDownSquareFill/>{day.day.mintemp_c}º</p>
                         <p><BsArrowUpSquareFill/>{day.day.maxtemp_c}º</p>
                     </div>

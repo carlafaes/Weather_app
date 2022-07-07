@@ -1,9 +1,12 @@
 import { useState,useEffect } from "react";
+import Accordion from 'react-bootstrap/Accordion'
+
+//components
+import InfoAstronomic from "./InfoAstronomic";
 import WeatherForm from "./WeatherForm";
 import WeatherMainInfo from "./WeatherMainInfo";
 import ClimaExtendido from "./ClimaExtendido";
 import WeatherForHours from "./WeatherForHours";
-import Accordion from 'react-bootstrap/Accordion'
 
 export default function WeatherApp() {
 
@@ -51,6 +54,13 @@ export default function WeatherApp() {
           <Accordion.Header>Pronostico Por Horas</Accordion.Header>
           <Accordion.Body>
             <WeatherForHours weather={weather} />
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey="3">
+          <Accordion.Header>Informacion Astronomica</Accordion.Header>
+          <Accordion.Body>
+            <InfoAstronomic weather={weather} />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

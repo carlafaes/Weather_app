@@ -43,7 +43,9 @@ return(
                 )})
                 :
                 <tfoot>
-                    <tr>Buscando pronostico</tr>
+                    <tr>
+                        <td>Buscando pronostico</td>
+                    </tr>
                 </tfoot>
                 }
                 </Table>
