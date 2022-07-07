@@ -5,7 +5,7 @@ export default function Alerts({weather}){
 
     return(
         <div className={style.weather}>
-            {weather? weather.alerts.alert.map((alert,index)=>(
+            {weather ? weather.alerts.alert.map((alert,index)=>(
                 <div key={index}>
                    <Table responsive striped bordered hover>
                     <thead>
