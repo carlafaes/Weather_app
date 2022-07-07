@@ -1,12 +1,13 @@
 import Table from 'react-bootstrap/Table'
+import style from './styles/ClimaExtendido.module.css';
 
 export default function Alerts({weather}){
 
     return(
-        <div>
+        <div className={style.weather}>
             {weather? weather.alerts.alert.map((alert,index)=>(
                 <div key={index}>
-                   <Table responsive striped bordered hover variant="dark">
+                   <Table responsive striped bordered hover>
                     <thead>
                         <tr>
                             <th>Titular</th>

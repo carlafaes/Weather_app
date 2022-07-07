@@ -1,0 +1,20 @@
+.btn_sub{
+margin: 10px;
+color: aliceblue;
+background-color: black;
+border-radius: 10px;
+padding: 10px;
+font-family: 'Times New Roman', Times, serif;
+}
+.label{
+    margin: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(40, 41, 61);
+}
+.input_sub{
+    padding: 5px;
+    color: rgb(5, 43, 199);
+    background-color: rgba(190, 202, 221, 0.705);
+    border-radius: 5px;
+}

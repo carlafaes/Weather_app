@@ -1,14 +1,15 @@
 import { BsArrowDownSquareFill, BsArrowUpSquareFill} from 'react-icons/bs';
 import Table from 'react-bootstrap/Table'
+import style from './styles/ClimaExtendido.module.css';
 
 export default function ClimaExtendido({weather}){
 
 
 
     return(
-        <div>
-            <h2>Pronostico extendido</h2>
-            <Table responsive striped bordered hover variant="dark">
+        <div className={style.weather}>
+            <h2 className={style.fuente}>Pronostico extendido</h2>
+            <Table responsive striped bordered hover>
                 <thead>
                     <tr>
                         <th>Fecha</th>

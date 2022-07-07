@@ -10,7 +10,7 @@ export default function WeatherMainInfo({ weather }) {
             <Container>
                 <Row>
                     <Col>
-                        <Table responsive bordered hover striped variant='dark'>
+                        <Table responsive  hover striped >
                             <thead>
                                 <tr>
                                     <th>Ciudad/Region</th>
@@ -25,7 +25,7 @@ export default function WeatherMainInfo({ weather }) {
                                 </tr>
                             </tbody>
                         </Table>
-                        <Table  responsive bordered hover striped variant='dark'>
+                        <Table  responsive  hover striped>
                             <thead>
                                 <tr>
                                     <th>Sensacion Termica</th>
@@ -44,7 +44,7 @@ export default function WeatherMainInfo({ weather }) {
                                 </tr>
                             </tbody>
                         </Table>
-                        <Table size='sm'  responsive bordered hover striped variant='dark'>
+                        <Table size='sm'  responsive hover striped >
                             <thead>
                                 <tr>
                                     <th>Humedad</th>

@@ -1,13 +1,13 @@
 import { NavItem } from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
-
+import style from './styles/ClimaExtendido.module.css';
 
 export default function WeatherForHours({weather}) {
 
 return(
-        <div>
-            <h2>Pronostico por horas</h2>
-            <Table responsive striped bordered hover variant="dark">
+        <div className={style.weather}>
+            <h2 className={style.fuente}>Pronostico por horas</h2>
+            <Table responsive striped bordered hover >
                 <thead>
                     <tr>
                         <th>Horas</th>

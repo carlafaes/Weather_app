@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
-import Accordion from 'react-bootstrap/Accordion'
+import style from './styles/WeatherApp.module.css';
+import Accordion from 'react-bootstrap/Accordion';
 
 //components
 import InfoAstronomic from "./InfoAstronomic";
@@ -41,11 +42,11 @@ export default function WeatherApp() {
       }
     }
   return (
-    <div className="weather-app">
+    <div className={style.weather}>
       <center>
       <WeatherForm onChangeCity={handleChangeCity}/>
       <WeatherMainInfo weather={weather} />
-      <Accordion>
+      <Accordion >
         <Accordion.Item eventKey="0">
           <Accordion.Header>Pronostico Extendido</Accordion.Header>
           <Accordion.Body>

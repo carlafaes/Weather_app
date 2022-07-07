@@ -1,11 +1,12 @@
 import Table from 'react-bootstrap/Table'
+import style from './styles/ClimaExtendido.module.css';
 
 export default function InfoAstronomic({ weather }) {
 
     return (
-        <div>
-            <h4>Luna</h4>
-            <Table responsive striped bordered hover variant="dark">
+        <div className={style.weather}>
+            <h4 className={style.fuente}>Luna</h4>
+            <Table responsive striped bordered hover >
                 <thead>
                     <tr>
                         <th>Fecha</th>
