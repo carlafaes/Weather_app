@@ -1,26 +1,40 @@
 import Table from 'react-bootstrap/Table'
 
-export default function InfoAstronomic({weather}){
+export default function InfoAstronomic({ weather }) {
 
-    return(
+    return (
         <div>
-            {weather ? 
-            weather.forecast.forecastday.map((day,index)=>(
-                <div key={index}>
-                        <h3>Informacion astronómica</h3>
-                        <h4>{day.date}</h4>
-                        <h4>Luna y fases de la luna</h4>
-                        <p>Fase de la luna:{day.astro.moon_phase}</p>
-                        <p>Puesta de luna:{day.astro.moonset}</p>
-                        <p>Salida de la luna: {day.astro.moonrise}</p>
-                        <br/>
-                        <h4>Sol y luz</h4>
-                        <p>Amanecer:{day.astro.sunrise}</p>
-                        <p>Atardecer:{day.astro.sunset}</p>
-                    </div>
-            ))
-            :
-            <div>Buscando informacion</div>}
+            <h4>Luna</h4>
+            <Table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Fase de la Luna</th>
+                        <th>Puesta de Luna</th>
+                        <th>Salida de la Luna</th>
+                        <th>Iluminacion lunar</th>
+                    </tr>
+                </thead>
+                {weather ? weather.forecast.forecastday.map((day,index)=>(
+                    <>
+                        <tbody>
+                                <tr>
+                                    <td>{day.date}</td>
+                                    <td>{day.astro.moon_phase}</td>
+                                    <td>{day.astro.moonset}</td>
+                                    <td>{day.astro.moonrise}</td>
+                                    <td>{day.astro.moon_illumination}%</td>
+                                </tr>
+                            </tbody>
+                    </>
+                ))
+                :
+                <tfoot>
+                    <tr>
+                        <td>Buscando informacion</td>
+                    </tr>
+                </tfoot>}
+            </Table>
         </div>
     )
 }

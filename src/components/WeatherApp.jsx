@@ -7,6 +7,7 @@ import WeatherForm from "./WeatherForm";
 import WeatherMainInfo from "./WeatherMainInfo";
 import ClimaExtendido from "./ClimaExtendido";
 import WeatherForHours from "./WeatherForHours";
+import InfoSun from "./InfoSun";
 
 export default function WeatherApp() {
 
@@ -28,7 +29,7 @@ export default function WeatherApp() {
     async function loadInfo(city='london'){
       try{
         const request= await fetch(
-          `${process.env.REACT_APP_FORECAST}&key=${process.env.REACT_APP_API_KEY}&q=${city}&days=9&aqi=no&alerts=yes&lang=es`
+          `${process.env.REACT_APP_FORECAST}&key=${process.env.REACT_APP_API_KEY}&q=${city}&days=10&aqi=no&alerts=yes&lang=es`
           );
           const json= await request.json();
           console.log(json);
@@ -61,6 +62,7 @@ export default function WeatherApp() {
           <Accordion.Header>Informacion Astronomica</Accordion.Header>
           <Accordion.Body>
             <InfoAstronomic weather={weather} />
+            <InfoSun weather={weather} />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
