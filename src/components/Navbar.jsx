@@ -1,24 +1,23 @@
 import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import clima from '../utils/clima.png'
 
-export default function Navbar(){
-    return(
+export default function Navbar_() {
+    return (
         <>
-         <Nav fill variant="tabs" defaultActiveKey="/home">
-        <Nav.Item>
-            <Nav.Link href="/">Por Horas</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Nav.Link eventKey="link-1">Loooonger NavLink</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Nav.Link eventKey="disabled" disabled>
-            Disabled
-            </Nav.Link>
-        </Nav.Item>
-        </Nav>
+            <Navbar bg="dark" variant="dark">
+                    <Navbar.Brand href="#">
+                        
+                        <img
+                            alt="clima_tch"
+                            src={clima}
+                            width="40"
+                            height="40"
+                            className="d-inline-block align-top"
+                        />{' '}
+                        CityWeather
+                    </Navbar.Brand>
+            </Navbar>
         </>
     )
 }
