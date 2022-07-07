@@ -5,7 +5,7 @@ export default function InfoSun({weather}){
     return(
         <div>
             <h4>Sol</h4>
-            <Table>
+            <Table responsive striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>Fecha</th>

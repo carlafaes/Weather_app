@@ -5,7 +5,7 @@ export default function InfoAstronomic({ weather }) {
     return (
         <div>
             <h4>Luna</h4>
-            <Table>
+            <Table responsive striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>Fecha</th>
@@ -33,7 +33,8 @@ export default function InfoAstronomic({ weather }) {
                     <tr>
                         <td>Buscando informacion</td>
                     </tr>
-                </tfoot>}
+                </tfoot>
+                }
             </Table>
         </div>
     )

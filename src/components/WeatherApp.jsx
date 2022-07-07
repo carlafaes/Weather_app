@@ -41,6 +41,7 @@ export default function WeatherApp() {
     }
   return (
     <div className="weather-app">
+      <center>
       <WeatherForm onChangeCity={handleChangeCity}/>
       <WeatherMainInfo weather={weather} />
       <Accordion>
@@ -59,13 +60,14 @@ export default function WeatherApp() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="3">
-          <Accordion.Header>Informacion Astronomica</Accordion.Header>
+          <Accordion.Header>Informacion Astronomica Extendida</Accordion.Header>
           <Accordion.Body>
             <InfoAstronomic weather={weather} />
             <InfoSun weather={weather} />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
+      </center>
     </div>
   );
 }
