@@ -1,6 +1,7 @@
 import Table from 'react-bootstrap/Table'
 import style from './styles/ClimaExtendido.module.css';
 
+
 export default function Alerts({weather}){
 
     return(

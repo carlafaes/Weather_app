@@ -1,6 +1,9 @@
 import { useState,useEffect } from "react";
 import style from './styles/WeatherApp.module.css';
 import Accordion from 'react-bootstrap/Accordion';
+import {FiAlertTriangle } from 'react-icons/fi';
+import { Ri24HoursLine,RiMoonClearLine } from 'react-icons/ri';
+import { BsCalendar3 } from 'react-icons/bs';
 
 //components
 import InfoAstronomic from "./InfoAstronomic";
@@ -10,6 +13,7 @@ import ClimaExtendido from "./ClimaExtendido";
 import WeatherForHours from "./WeatherForHours";
 import InfoSun from "./InfoSun";
 import Alerts from "./Alerts";
+import Footer from "./Footer";
 
 export default function WeatherApp() {
 
@@ -48,28 +52,28 @@ export default function WeatherApp() {
       <WeatherMainInfo weather={weather} />
       <Accordion >
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Pronostico Extendido</Accordion.Header>
+          <Accordion.Header><BsCalendar3/> Pronostico Extendido </Accordion.Header>
           <Accordion.Body>
             <ClimaExtendido weather={weather} />
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="1">
-          <Accordion.Header>Pronostico Por Horas</Accordion.Header>
+          <Accordion.Header><Ri24HoursLine/>Pronostico Por Horas</Accordion.Header>
           <Accordion.Body>
             <WeatherForHours weather={weather} />
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="3">
-          <Accordion.Header>Alertas Metereológicas</Accordion.Header>
+          <Accordion.Header><FiAlertTriangle/>Alertas Metereológicas </Accordion.Header>
           <Accordion.Body>
             <Alerts weather={weather} />
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="4">
-          <Accordion.Header>Informacion Astronomica Extendida</Accordion.Header>
+          <Accordion.Header><RiMoonClearLine/>Informacion Astronomica Extendida</Accordion.Header>
           <Accordion.Body>
             <InfoAstronomic weather={weather} />
             <InfoSun weather={weather} />
@@ -77,6 +81,8 @@ export default function WeatherApp() {
         </Accordion.Item>
       </Accordion>
       </center>
+      <br/>
+      <Footer />
     </div>
   );
 }
