@@ -30,7 +30,7 @@ export default function ClimaExtendido({weather}){
                                     <BsArrowUpSquareFill/>{day.day.maxtemp_c}º
                                 </td>
                                 <td>{day.day.maxwind_kph}km/h</td>
-                                <td>{day.day.avghumidity}</td>
+                                <td>{day.day.avghumidity}%</td>
                                 <td>{day.day.totalprecip_mm}mm</td>
                                 <td>
                                     <img src={`http:${day.day.condition.icon}`} alt={day.day.condition.text}/>
