@@ -16,6 +16,7 @@ import Alerts from "./Alerts";
 import Footer from "./Footer";
 import Spinner from "./Spinner";
 
+
 export default function WeatherApp() {
 
     const [weather,setWeather] = useState(null);
@@ -39,7 +40,7 @@ export default function WeatherApp() {
           `${process.env.REACT_APP_FORECAST}&key=${process.env.REACT_APP_API_KEY}&q=${city}&days=10&aqi=no&alerts=yes&lang=es`
           );
           const json= await request.json();
-          console.log(json);
+          // console.log(json);
           setWeather(json);
       }
       catch(err){
