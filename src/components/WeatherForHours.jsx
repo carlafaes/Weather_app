@@ -1,6 +1,7 @@
 import { NavItem } from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
 
+
 export default function WeatherForHours({weather}) {
 
 return(

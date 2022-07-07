@@ -3,7 +3,7 @@ import WeatherForm from "./WeatherForm";
 import WeatherMainInfo from "./WeatherMainInfo";
 import ClimaExtendido from "./ClimaExtendido";
 import WeatherForHours from "./WeatherForHours";
-
+import Accordion from 'react-bootstrap/Accordion'
 
 export default function WeatherApp() {
 
@@ -39,8 +39,21 @@ export default function WeatherApp() {
     <div className="weather-app">
       <WeatherForm onChangeCity={handleChangeCity}/>
       <WeatherMainInfo weather={weather} />
-      <ClimaExtendido weather={weather} />
-      <WeatherForHours weather={weather} />
+      <Accordion>
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>Pronostico Extendido</Accordion.Header>
+          <Accordion.Body>
+            <ClimaExtendido weather={weather} />
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>Pronostico Por Horas</Accordion.Header>
+          <Accordion.Body>
+            <WeatherForHours weather={weather} />
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 }
