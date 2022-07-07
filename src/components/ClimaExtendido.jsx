@@ -1,4 +1,8 @@
-import { BsArrowDownSquareFill, BsArrowUpSquareFill} from 'react-icons/bs';
+import { BsArrowDownSquareFill, BsArrowUpSquareFill,BsCalendar3,BsCloudRain} from 'react-icons/bs';
+import { MdOutlineAccessTime } from 'react-icons/md';
+import { TbTemperaturePlus,TbWind } from 'react-icons/tb';
+import { WiHumidity } from 'react-icons/wi';
+import { BiArrowToBottom,BiArrowToTop } from 'react-icons/bi';
 import Table from 'react-bootstrap/Table'
 import style from './styles/ClimaExtendido.module.css';
 
@@ -12,11 +16,11 @@ export default function ClimaExtendido({weather}){
             <Table responsive striped bordered hover>
                 <thead>
                     <tr>
-                        <th>Fecha</th>
-                        <th>Temperatura</th>
-                        <th>Viento</th>
-                        <th>Humedad</th>
-                        <th>Precipitaciones</th>
+                        <th><BsCalendar3/>Fecha</th>
+                        <th><TbTemperaturePlus/>Temperatura</th>
+                        <th><TbWind/> Viento</th>
+                        <th><WiHumidity/> Humedad</th>
+                        <th><BsCloudRain/>Precipitaciones</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -26,9 +30,9 @@ export default function ClimaExtendido({weather}){
                             <tr>
                                 <td>{day.date}</td>
                                 <td>
-                                    <BsArrowDownSquareFill/>{day.day.mintemp_c}º
+                                    <BiArrowToBottom/>{day.day.mintemp_c}º
                                     {" "}
-                                    <BsArrowUpSquareFill/>{day.day.maxtemp_c}º
+                                    <BiArrowToTop/>{day.day.maxtemp_c}º
                                 </td>
                                 <td>{day.day.maxwind_kph}km/h</td>
                                 <td>{day.day.avghumidity}%</td>

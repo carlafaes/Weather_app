@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from './styles/WeatherForm.module.css'
+import { BiSearchAlt } from 'react-icons/bi';
 
 export default function WeatherForm({onChangeCity}){
     const [city,setCity] = useState('');
@@ -19,14 +20,14 @@ export default function WeatherForm({onChangeCity}){
     return(
         <>
         <form onSubmit={handleSubmit}>
-            <label className={style.label}>Buscar Ciudad</label>
+            {/* <label className={style.label}>Buscar Ciudad</label> */}
             <input
             className={style.input_sub} 
             type="text" 
             placeholder="por ejemplo:Buenos Aires" 
             onChange={handleChange}/>
             <button className={style.btn_sub}>
-                Buscar
+                <BiSearchAlt/>Buscar
             </button>
         </form>
         </>

@@ -1,17 +1,18 @@
 import Table from 'react-bootstrap/Table'
+import { BsSun,BsSunrise,BsSunset,BsCalendar3 } from 'react-icons/bs';
 import style from './styles/ClimaExtendido.module.css';
 
 export default function InfoSun({weather}){
 
     return(
         <div className={style.weather}>
-            <h4 className={style.fuente}>Sol</h4>
+            <h4 className={style.fuente}><BsSun/>Sol</h4>
             <Table responsive striped bordered hover >
                 <thead>
                     <tr>
-                        <th>Fecha</th>
-                        <th>Amanecer</th>
-                        <th>Atardecer</th>
+                        <th><BsCalendar3/>Fecha</th>
+                        <th><BsSunrise/> Amanecer</th>
+                        <th><BsSunset/>Atardecer</th>
                     </tr>
                 </thead>
                 {weather ? weather.forecast.forecastday.map((day,index)=>(

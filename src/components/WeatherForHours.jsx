@@ -1,6 +1,8 @@
-import { NavItem } from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
 import style from './styles/ClimaExtendido.module.css';
+import { MdOutlineAccessTime } from 'react-icons/md';
+import { TbTemperaturePlus,TbWind } from 'react-icons/tb';
+import { WiHumidity } from 'react-icons/wi';
 
 export default function WeatherForHours({weather}) {
 
@@ -10,11 +12,11 @@ return(
             <Table responsive striped bordered hover >
                 <thead>
                     <tr>
-                        <th>Horas</th>
-                        <th>Temperatura</th>
+                        <th><MdOutlineAccessTime/>Horas</th>
+                        <th><TbTemperaturePlus/>Temperatura</th>
                         <th></th>
-                        <th>Viento</th>
-                        <th>Humedad</th>
+                        <th><TbWind/>Viento</th>
+                        <th><WiHumidity/>Humedad</th>
                     </tr>
                 </thead>
             {weather ? weather.forecast.forecastday.map(function(hours,index){
@@ -24,7 +26,7 @@ return(
                             return(
                                 <tbody key={index}>
                                 <tr>
-                                    <td>{(hour.time).slice(10)}</td>
+                                    <td>{(hour.time).slice(10)} hs</td>
                                     <td>{hour.feelslike_c}º</td>
                             
                                     <td>

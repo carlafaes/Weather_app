@@ -15,26 +15,29 @@ export default function WeatherMainInfo({ weather }) {
                                 <tr>
                                     <th>Ciudad/Region</th>
                                     <th>Temperatura</th>
+                                    <th>Sensacion Termica</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>{weather?.location.name}, <br /> {weather?.location.region},<br />{weather?.location.country}</td>
                                     <td>{weather?.current.temp_c}º</td>
-
+                                    <td>{weather?.current.feelslike_c}º</td>
                                 </tr>
                             </tbody>
                         </Table>
                         <Table  responsive  hover striped>
                             <thead>
                                 <tr>
-                                    <th>Sensacion Termica</th>
+                                    <th>Precipitaciones</th>
+                                    <th>Presión atmosférica</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{weather?.current.feelslike_c}º</td>
+                                    <td>{weather?.current.precip_mm}mm</td>
+                                    <td>{weather?.current.pressure_mb}mb</td>
                                     <td>
                                         <img src={`http:${weather?.current.condition.icon}`}
                                             alt="imagen_icon"
